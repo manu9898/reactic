@@ -1,0 +1,15 @@
+<section class="h-auto max-h-full flex flex-col">
+    <div class="bg-primary flex-none h-12 relative z-10">
+        <a href="/" class="mb-20 block">
+            {{ source("logo.svg") }}
+        </a>
+    </div>
+
+    <div class="-mr-12 -ml-12 bg-tertiary flex-none h-28 flex flex-col">
+        {{ include("methodologie/_process_header.html.twig") }}
+    </div>
+
+    <div>
+        {{ include("methodologie/_process_content.html.twig") }}
+    </div>
+</section>

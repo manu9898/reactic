@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil Reactic{% endblock %}
+
+{% block body %}
+    <!-- section 1 -->
+
+    {{ include("home/section1.html.twig") }}
+    <!-- fin de la première section -->
+
+    <!-- section 2 -->
+
+    {{ include("home/section2.html.twig") }}
+    <!-- fin de section 2 -->
+
+<!-- 3eme section -->
+    {{ include("home/section3.html.twig") }}
+
+<!-- fin de 3eme section -->
+<!-- section 4 -->
+
+    {{ include("home/section4.html.twig") }}
+
+<!-- fin de section 4 -->
+
+<!-- section 5 -->
+    {{ include("home/footer.html.twig") }}
+
+<!-- fin de section 5 -->
+{% endblock %}

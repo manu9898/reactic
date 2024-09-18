@@ -1,0 +1,51 @@
+<div class="flex justify-around items-center 2xl:min-h-screen flex-wrap">
+    <div class="">
+        <div class="text-white">
+            <div class="bg-teal-400 h-0.5 w-screen 2xl:hidden "></div>
+            <div class="text-5xl my-5 text-center">
+                {{ m_title | raw }}
+            </div>
+
+            <div class="bg-teal-400 h-0.5 w-screen xl:w-screen 2xl:bg-teal-400 2xl:w-72 2xl:h-0.5  xl:bg-teal-400 xl:h-0.5 xl:-ml-12 xl:translate-x-12"></div>
+
+            <div class="mt-10 mb-20 pl-12">
+                {# Affiche la première liste si m_current_item est égal à 1 #}
+                {% if m_current_item == 1 %}
+                    <div class="sm:pt-20 md:pt-20 lg:pt-0 xl:pt-0 2xl:pt-0">
+                        {{ smartListFistSection | raw }}
+                    </div>
+                {% elseif m_current_item == 2 %}
+                    <div class="sm:pt-20 md:pt-20 lg:pt-0 xl:pt-0 2xl:pt-0">
+                    {{ smartListSecondSection | raw }}
+                    </div>
+                {% elseif m_current_item == 3 %}
+                    <div class="sm:pt-20 md:pt-20 lg:pt-0 xl:pt-0 2xl:pt-0">
+                    {{ smartListThirdSection | raw }}
+                    </div>
+                {% elseif m_current_item == 4 %}
+                    <div class="sm:pt-20 md:pt-20 lg:pt-0 xl:pt-0 2xl:pt-0">
+                    {{ smartListFourthSection | raw }}
+                    </div>
+                {% elseif m_current_item == 5 %}
+                    <div class="sm:pt-20 md:pt-20 lg:pt-0 xl:pt-0 2xl:pt-0">
+                    {{ smartListFiveSection | raw }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-center items-center h-full mb-20">
+        {% if m_current_item == 1 %}
+            <img loading="lazy" src="{{ asset('images/img-methodologie-oriente-croissance-etape-1.png') }}" alt="Image 1" class="wp-image-634 w-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg 2xl:max-w-xl" height="auto">
+        {% elseif m_current_item == 2 %}
+            <img loading="lazy" src="{{ asset('images/methodologie-oriente-croissance-etape-2.png') }}" alt="Image 2" class="wp-image-634 w-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg 2xl:max-w-xl" height="auto">
+        {% elseif m_current_item == 3 %}
+            <img loading="lazy" src="{{ asset('images/methodologie-oriente-croissance-etape-3.png') }}" alt="Image 3" class="wp-image-634 w-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg 2xl:max-w-xl" height="auto">
+        {% elseif m_current_item == 4 %}
+            <img loading="lazy" src="{{ asset('images/methodologie-oriente-croissance-etape-4.png') }}" alt="Image 4" class="wp-image-634 w-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg 2xl:max-w-xl" height="auto">
+        {% elseif m_current_item == 5 %}
+            <img loading="lazy" src="{{ asset('images/methodologie-oriente-croissance-etape-5.png') }}" alt="Image 5" class="wp-image-634 w-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg 2xl:max-w-xl" height="auto">
+        {% endif %}
+    </div>
+</div>

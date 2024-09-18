@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire{% endblock %}
+
+{% block body %}
+    <section class="min-h-screen flex bg-primary justify-center items-center">
+        <form action="/ma-page-de-traitement" method="post" class="w-full max-w-lg">
+            <ul class="space-y-4">
+                <li class="py-2">
+                    <label class="block text-primary-50 mb-1" for="name">Nom&nbsp;:</label>
+                    <input type="text" id="name" name="user_name" class="w-full p-2 border border-teal-300 rounded" />
+                </li>
+                <li class="py-2">
+                    <label class="block text-primary-50 mb-1" for="name">Prénom&nbsp;:</label>
+                    <input type="text" id="name" name="user_name" class="w-full p-2 border border-teal-300 rounded" />
+                </li>
+                <li class="py-2">
+                    <label class="block text-primary-50 mb-1" for="name">Téléphone&nbsp;:</label>
+                    <input type="text" id="name" name="user_name" class="w-full p-2 border border-teal-300 rounded" />
+                </li>
+                <li class="py-2">
+                    <label class="block text-primary-50 mb-1" for="mail">E-mail&nbsp;:</label>
+                    <input type="email" id="mail" name="user_mail" class="w-full p-2 border border-teal-300 rounded" />
+                </li>
+                <li class="py-2">
+                    <label class="block text-primary-50 mb-1" for="msg">Message&nbsp;:</label>
+                    <textarea id="msg" name="user_message" class="w-full p-2 border border-teal-300 rounded" rows="4"></textarea>
+                </li>
+            </ul>
+            <button type="submit" class="text-teal-900 hover:bg-teal-900 hover:text-primary transition-all duration-300 border-2 border-teal-400 p-2.5 " disabled>Envoyer</button>
+        </form>
+    </section>
+{% endblock %}
