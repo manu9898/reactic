@@ -3,7 +3,10 @@
 {% block title %}Formulaire{% endblock %}
 
 {% block body %}
-    <section class="min-h-screen flex bg-primary justify-center items-center">
+    <a href="/" class="flex items-center reveal-item">
+        {{ source('layout/svg/R_logo.svg') }}
+    </a>
+    <section class="min-h-screen flex bg-primary justify-center items-center reveal-item">
         <form action="/ma-page-de-traitement" method="post" class="w-full max-w-lg">
             <ul class="space-y-4">
                 <li class="py-2">

@@ -7,16 +7,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
-    {% endblock %}
 
-    {% block javascripts %}
-        {{ encore_entry_script_tags('app') }}
+
     {% endblock %}
 </head>
-<body class="bg-primary ">
+<body class="bg-primary">
 {% block body %}
 
 {% endblock %}
-</body>
 
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+
+    <!-- Script ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+
+
+        ScrollReveal().reveal('.reveal-section-0-item', {
+            duration: 1500,
+            origin: 'bottom',
+            distance: '50px',
+            opacity: 0,
+            delay: 200,
+            interval: 100
+        });
+
+        ScrollReveal().reveal('.reveal-text-1', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '50px',
+            opacity: 0,
+            delay: 200,
+        });
+
+        ScrollReveal().reveal('.reveal-text-2', {
+            duration: 2000,
+            origin: 'right',
+            distance: '50px',
+            opacity: 0,
+            delay: 400,
+        });
+
+        ScrollReveal().reveal('.reveal-section-3-item', {
+            duration: 1500,
+            origin: 'left',
+            distance: '50px',
+            opacity: 0,
+            delay: 200,
+            interval: 100
+        });
+
+        ScrollReveal().reveal('.reveal-section-4-item', {
+            duration: 1800,
+            origin: 'bottom',
+            distance: '60px',
+            opacity: 0,
+            delay: 100,
+            interval: 200
+        });
+
+        ScrollReveal().reveal('.reveal-footer-item', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '50px',
+            opacity: 0,
+            delay: 300,
+            interval: 150
+        });
+
+        // _process_content page
+        ScrollReveal().reveal('.reveal-item', {
+            duration: 1500,
+            origin: 'bottom',
+            distance: '50px',
+            opacity: 0,
+            delay: 300,
+            interval: 150
+        });
+    </script>
+{% endblock %}
+</body>
 </html>
